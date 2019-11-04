@@ -2,24 +2,24 @@
 class Checksum < Formula
   desc "SHA256 file verification for consistency check purposes"
   homepage "https://github.com/teran/checksum"
-  version "0.8.5"
+  version "0.8.5-1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/teran/checksum/releases/download/v0.8.5/checksum_0.8.5_macOS_amd64.tar.gz"
-    sha256 "c7fd2a128992562540128760f829895f0f7d539fb4f9a20780b6f7e18960bcb7"
+    url "https://github.com/teran/checksum/releases/download/v0.8.5-1/checksum_0.8.5-1_macOS_amd64.tar.gz"
+    sha256 "fabee5115dc1a0e1aeee4c707d37470fc5fd85a4945375f4cb3c4e96d26dc6b0"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/teran/checksum/releases/download/v0.8.5/checksum_0.8.5_linux_amd64.tar.gz"
-      sha256 "1f889813d91f24b39651d310e8b71b56331167ca50a3fd2e805a8937ebebee7e"
+      url "https://github.com/teran/checksum/releases/download/v0.8.5-1/checksum_0.8.5-1_linux_amd64.tar.gz"
+      sha256 "89da983e7be287a6785debb96bd0fea8657251d079590440e9a637a6926cf430"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/teran/checksum/releases/download/v0.8.5/checksum_0.8.5_linux_arm64.tar.gz"
-        sha256 "038d2acf745bc8114f6ce74845b742a3d35e7cdf6a3f6ec0e5800370ed19eae4"
+        url "https://github.com/teran/checksum/releases/download/v0.8.5-1/checksum_0.8.5-1_linux_arm64.tar.gz"
+        sha256 "951dc0cee755239e4468a975902983235d6e48f217ab4c9a98cb19b47fff5e29"
       else
-        url "https://github.com/teran/checksum/releases/download/v0.8.5/checksum_0.8.5_linux_armv6.tar.gz"
-        sha256 "dfc6438a528cea4f5b9639216c5e3c9c8d4a75104b75ef42371bf0b02e366d50"
+        url "https://github.com/teran/checksum/releases/download/v0.8.5-1/checksum_0.8.5-1_linux_armv6.tar.gz"
+        sha256 "c88866ae942a582c2922b96658d0dd769395cb538e1612eb8e633b7f3d9de4a5"
       end
     end
   end
@@ -29,6 +29,6 @@ class Checksum < Formula
   end
 
   test do
-    system "#{bin}/checksum -version"
+    system "#{bin}/checksum --version"
   end
 end
