@@ -2,24 +2,24 @@
 class Checksum < Formula
   desc "SHA256 file verification for consistency check purposes"
   homepage "https://github.com/teran/checksum"
-  version "0.8.5-1"
+  version "0.8.5-2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/teran/checksum/releases/download/v0.8.5-1/checksum_0.8.5-1_macOS_amd64.tar.gz"
-    sha256 "fabee5115dc1a0e1aeee4c707d37470fc5fd85a4945375f4cb3c4e96d26dc6b0"
+    url "https://github.com/teran/checksum/releases/download/v0.8.5-2/checksum_0.8.5-2_macOS_amd64.tar.gz"
+    sha256 "38efdf834c3907977611641db3c618fe365654872c896f4c79e597bcd5438d68"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/teran/checksum/releases/download/v0.8.5-1/checksum_0.8.5-1_linux_amd64.tar.gz"
-      sha256 "89da983e7be287a6785debb96bd0fea8657251d079590440e9a637a6926cf430"
+      url "https://github.com/teran/checksum/releases/download/v0.8.5-2/checksum_0.8.5-2_linux_amd64.tar.gz"
+      sha256 "ea133ae2049875db7ef2bffb318c2f46d4008d5a94282985b4ad714b83ecbae8"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/teran/checksum/releases/download/v0.8.5-1/checksum_0.8.5-1_linux_arm64.tar.gz"
-        sha256 "951dc0cee755239e4468a975902983235d6e48f217ab4c9a98cb19b47fff5e29"
+        url "https://github.com/teran/checksum/releases/download/v0.8.5-2/checksum_0.8.5-2_linux_arm64.tar.gz"
+        sha256 "15b49589d275d9480e7081f812334e7d19be27023edf29d59644457f9e839413"
       else
-        url "https://github.com/teran/checksum/releases/download/v0.8.5-1/checksum_0.8.5-1_linux_armv6.tar.gz"
-        sha256 "c88866ae942a582c2922b96658d0dd769395cb538e1612eb8e633b7f3d9de4a5"
+        url "https://github.com/teran/checksum/releases/download/v0.8.5-2/checksum_0.8.5-2_linux_armv6.tar.gz"
+        sha256 "b08a3c02a45b1ab67c218609b2102c367c0533840d1417eee9683f4c2e8980a5"
       end
     end
   end
