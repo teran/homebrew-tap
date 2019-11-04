@@ -7,15 +7,19 @@ class Eos1vTagger < Formula
 
   if OS.mac?
     url "https://github.com/teran/eos-1v-tagger/releases/download/v0.1-alpha.16/eos-1v-tagger_0.1-alpha.16_macOS_amd64.tar.gz"
-    sha256 "2408b139cb41f192f3a2562f56e86de7bcaa2e439c0560679ba002cd2157ca55"
+    sha256 "5fdf7b62ca854d75b9f8db9a0c4db97ff568722f3f005521062e8e210463cf27"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/teran/eos-1v-tagger/releases/download/v0.1-alpha.16/eos-1v-tagger_0.1-alpha.16_linux_amd64.tar.gz"
-      sha256 "b0e10059ffd1cf8ea3fe29d9e21791eab0057e23f6073a33b77a4745f81a816b"
+      sha256 "373fcaddd11206531d1003c57401af82b9efaa0403a6fdd72fb04f5ce6e5ca8e"
     end
   end
 
   def install
     bin.install "eos-1v-tagger"
+  end
+
+  test do
+    system "#{bin}/eos-1v-tagger -version"
   end
 end
