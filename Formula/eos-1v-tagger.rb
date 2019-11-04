@@ -7,16 +7,15 @@ class Eos1vTagger < Formula
 
   if OS.mac?
     url "https://github.com/teran/eos-1v-tagger/releases/download/v0.1-alpha.16/eos-1v-tagger_0.1-alpha.16_macOS_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "258259d026a69b93ed53ea74733094957890bcc8e13434c07002919ddd52e4d0"
+    sha256 "56bb73d2d7ecf4d67eb9b5f1d02e9c0bf0d258f82eb622eee955ded04e0aea9b"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/teran/eos-1v-tagger/releases/download/v0.1-alpha.16/eos-1v-tagger_0.1-alpha.16_linux_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "5d3e62b95f903001907694f9eb793d8d405591103a497f3ebab87a4eb8178416"
+      sha256 "6e61ea8d143bf4838e8de94f326999e003495dbc8f6a80761506f6d6bdc9aedd"
     end
   end
 
   def install
     bin.install "program"
-    ...
   end
 end
