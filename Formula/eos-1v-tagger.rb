@@ -7,11 +7,11 @@ class Eos1vTagger < Formula
 
   if OS.mac?
     url "https://github.com/teran/eos-1v-tagger/releases/download/v0.1-alpha.16/eos-1v-tagger_0.1-alpha.16_macOS_amd64.tar.gz"
-    sha256 "5fdf7b62ca854d75b9f8db9a0c4db97ff568722f3f005521062e8e210463cf27"
+    sha256 "0c89699d4e6c158d094d202349675c927a743290e77495d83f34b744ac706b02"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/teran/eos-1v-tagger/releases/download/v0.1-alpha.16/eos-1v-tagger_0.1-alpha.16_linux_amd64.tar.gz"
-      sha256 "373fcaddd11206531d1003c57401af82b9efaa0403a6fdd72fb04f5ce6e5ca8e"
+      sha256 "534858c7b080eb8b6dd47c941a7fd3edb2e9cee64bcfa193e9062cb70e840f53"
     end
   end
 
