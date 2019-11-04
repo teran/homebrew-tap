@@ -6,12 +6,12 @@ class Eos1vTagger < Formula
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/teran/eos-1v-tagger/releases/download/v0.1-alpha.16/eos-1v-tagger_0.1-alpha.16_macOS_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "56bb73d2d7ecf4d67eb9b5f1d02e9c0bf0d258f82eb622eee955ded04e0aea9b"
+    url "https://github.com/teran/eos-1v-tagger/releases/download/v0.1-alpha.16/eos-1v-tagger_0.1-alpha.16_macOS_amd64.tar.gz"
+    sha256 "aaa9131ebb8fd9842286986a5e50cb7c090c8724144b1059fbe27e71e734ba46"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/teran/eos-1v-tagger/releases/download/v0.1-alpha.16/eos-1v-tagger_0.1-alpha.16_linux_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "6e61ea8d143bf4838e8de94f326999e003495dbc8f6a80761506f6d6bdc9aedd"
+      url "https://github.com/teran/eos-1v-tagger/releases/download/v0.1-alpha.16/eos-1v-tagger_0.1-alpha.16_linux_amd64.tar.gz"
+      sha256 "b7206e681279041ff59fbe6ab25b2f2a3295ce385e12e7427d065329347cc064"
     end
   end
 
