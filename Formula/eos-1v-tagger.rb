@@ -2,16 +2,16 @@
 class Eos1vTagger < Formula
   desc "Canon ES-E1 CSV parsing tool to generate EXIF data for film scans"
   homepage "https://github.com/teran/eos-1v-tagger"
-  version "0.1-alpha.26"
+  version "0.1-alpha.27"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/teran/eos-1v-tagger/releases/download/v0.1-alpha.26/eos-1v-tagger_0.1-alpha.26_macOS_amd64.tar.gz"
-    sha256 "d6144dfdbe2e831d6c35d85978530672a2a27cf66a0397a0314bd6c9e0d9f250"
+    url "https://github.com/teran/eos-1v-tagger/releases/download/v0.1-alpha.27/eos-1v-tagger_0.1-alpha.27_macOS_amd64.tar.gz"
+    sha256 "12cf1237215c132d4e39bf550297a39b2c13f99e5fedd8ffde397d6e80f0f2ac"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/teran/eos-1v-tagger/releases/download/v0.1-alpha.26/eos-1v-tagger_0.1-alpha.26_linux_amd64.tar.gz"
-      sha256 "65cd42fc0074a86f0a2440c8753d4e2d1192dc85901783093b69f94e5dcb530b"
+      url "https://github.com/teran/eos-1v-tagger/releases/download/v0.1-alpha.27/eos-1v-tagger_0.1-alpha.27_linux_amd64.tar.gz"
+      sha256 "058eeaade4f03012cf411c24eb6efcd1d0b20a24c7e6e54d0da09148bbc62299"
     end
   end
 
