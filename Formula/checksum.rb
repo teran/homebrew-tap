@@ -2,26 +2,24 @@
 class Checksum < Formula
   desc "SHA256 file verification for consistency check purposes"
   homepage "https://github.com/teran/checksum"
-  version "0.8.5-2"
+  version "0.8.6"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/teran/checksum/releases/download/v0.8.5-2/checksum_0.8.5-2_macOS_amd64.tar.gz"
-    sha256 "38efdf834c3907977611641db3c618fe365654872c896f4c79e597bcd5438d68"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/teran/checksum/releases/download/v0.8.5-2/checksum_0.8.5-2_linux_amd64.tar.gz"
-      sha256 "ea133ae2049875db7ef2bffb318c2f46d4008d5a94282985b4ad714b83ecbae8"
-    end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/teran/checksum/releases/download/v0.8.5-2/checksum_0.8.5-2_linux_arm64.tar.gz"
-        sha256 "15b49589d275d9480e7081f812334e7d19be27023edf29d59644457f9e839413"
-      else
-        url "https://github.com/teran/checksum/releases/download/v0.8.5-2/checksum_0.8.5-2_linux_armv6.tar.gz"
-        sha256 "b08a3c02a45b1ab67c218609b2102c367c0533840d1417eee9683f4c2e8980a5"
-      end
-    end
+    url "https://github.com/teran/checksum/releases/download/v0.8.6/checksum_0.8.6_macOS_amd64.tar.gz"
+    sha256 "41b7198e285c261936142337dea14b2a255bd04f2c0f314815cacb1cbd9dc358"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/teran/checksum/releases/download/v0.8.6/checksum_0.8.6_linux_amd64.tar.gz"
+    sha256 "924472e51b04f0c36ef15571e9121982012ee2b6a6c41afde7338c120aad975e"
+  end
+  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+    url "https://github.com/teran/checksum/releases/download/v0.8.6/checksum_0.8.6_linux_armv6.tar.gz"
+    sha256 "e82b87adde94f8e0a8d9d53e4904231f1d3ee4a605049352203a85d6df606d9f"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/teran/checksum/releases/download/v0.8.6/checksum_0.8.6_linux_arm64.tar.gz"
+    sha256 "d43c526b89cbac424c128248b6b6624d0aa193266534aac383888859fa3b6600"
   end
 
   def install
